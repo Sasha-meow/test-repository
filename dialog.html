@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+      <div class="chat">
+        <div class="chat__content">
+          <div class="chat__message message--user-1">
+            <figure class="message__author-pic">
+              <img src="images/avatar.png" class="chat__person-avatar">
+            </figure>
+            <div class="message__text-1">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at purus nibh. Cras metus nulla, vestibulum in auctor ac, fermentum vitae tellus.</p>
+            </div>
+          </div>
+          <div class="chat__message message--user-2">
+            <figure class="message__author-pic">
+              <img src="images/avatar.png" class="chat__person-avatar">
+            </figure>
+            <div class="message__text-2">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at purus nibh. Cras metus nulla, vestibulum in auctor ac, fermentum vitae tellus.</p>
+            </div>
+          </div>
+          <div class="chat__message message--user-1">
+            <figure class="message__author-pic">
+              <img src="images/avatar.png" class="chat__person-avatar">
+            </figure>
+            <div class="message__text-1">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at purus nibh. Cras metus nulla, vestibulum in auctor ac, fermentum vitae tellus.</p>
+            </div>
+          </div>
+          <div class="chat__message message--user-2">
+            <figure class="message__author-pic">
+              <img src="images/avatar.png" class="chat__person-avatar">
+            </figure>
+            <div class="message__text-2">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at purus nibh. Cras metus nulla, vestibulum in auctor ac, fermentum vitae tellus.</p>
+            </div>
+          </div>
+          <div class="chat__message message--user-1">
+            <figure class="message__author-pic">
+              <img src="images/avatar.png" class="chat__person-avatar">
+            </figure>
+            <div class="message__text-1">
+              <p>Это означает, что в Вашем доме, офисе, кабинете, мастерской хранятся ценности бóльшие, чем просто деньги или драгоценности, - культурные ценности. Произведения искусства, антиквариат, иные предметы коллекционирования – все это имущество, безусловно высокая стоимость которого. </p>
+            </div>
+          </div>
+          <div class="chat__message message--user-2">
+            <figure class="message__author-pic">
+              <img src="images/avatar.png" class="chat__person-avatar">
+            </figure>
+            <div class="message__text-2">
+              <p>Это означает,</p>
+            </div>
+          </div>
+          <div class="chat__message message--user-1">
+            <figure class="message__author-pic">
+              <img src="images/avatar.png" class="chat__person-avatar">
+            </figure>
+            <div class="message__text-1">
+              <p>доме, офисе, кабинете, мастерской</p>
+            </div>
+          </div>
+          <fieldset class= "chat__border-time">
+            <legend class= "chat__message-time">10 марта 2021</legend>
+            <div class="chat__message message--user-2">
+              <figure class="message__author-pic">
+                <img src="images/avatar.png" class="chat__person-avatar">
+              </figure>
+              <div class="message__text-2">
+                <p>Это означает,</p>
+              </div>
+            </div>
+            <div class="chat__message message--user-1">
+              <figure class="message__author-pic">
+                <img src="images/avatar.png" class="chat__person-avatar">
+              </figure>
+              <div class="message__text-1">
+                <p>доме, офисе, кабинете, мастерской</p>
+              </div>
+            </div>
+          </fieldset>
+      </div>
+      <div class="chat__enter-message">
+        <textarea placeholder="Введите сообщение" class="chat__enter-message__input"></textarea>
+        <button class="chat__enter-message__btn">Отправить</button>
+      </div>
+    </div>
+    </body>
+</html>
+<style>
+@font-face {
+   font-family: font;
+   src: url(fonts/Roboto.ttf) format('truetype');
+   font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+   font-family: extra-font;
+   src: url(fonts/NotoSans.ttf) format('truetype');
+   font-weight: normal;
+    font-style: normal;
+}
+*{
+  outline: none !important;
+}
+html, body{
+  margin: 0;
+  padding: 0;
+}
+.chat{
+  width: 55vw;
+  height: 96vh;
+  background-image: url(images/picture.png);
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 2px 0px rgba(90, 97, 105, 0.1), 0px 4px 8px rgba(90, 97, 105, 0.1), 0px 10px 10px rgba(90, 97, 105, 0.1), 0px 7px 70px rgba(90, 97, 105, 0.1);
+}
+.chat__content{
+  overflow-y: scroll;
+  -ms-overflow-style:scrollbar;
+  height: 63%;
+  border-bottom: 1px solid #DBDBDB;
+  padding: 2% 2% 2% 2%;
+}
+.chat__person-avatar{
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  width: 47px;
+  height: 47px;
+}
+.chat__message {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: font, Roboto;
+  font-size: 14px;
+  line-height: 24px;
+  color: #000000;
+}
+.message--user-1 + .message--user-2,
+.message--user-2 + .message--user-1 {
+  margin-top: 1em;
+}
+.message--user-1 + .message--user-1,
+.message--user-2 + .message--user-2 {
+  margin-top: .5em;
+}
+.message__author-pic {
+  margin: 0 10px 0 0;
+}
+
+.message__text-1, .message__text-2{
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 0px rgba(90, 97, 105, 0.01), 0px 4px 8px rgba(90, 97, 105, 0.01), 0px 10px 10px rgba(90, 97, 105, 0), 0px 7px 70px rgba(90, 97, 105, 0.1);
+  background-color: rgba(241, 243, 245, 1);
+  max-width: 70%;
+  position: relative;
+}
+.message__text-1:before {
+	content: "";
+  position: absolute;
+  right: 100%;
+  width: 0;
+  height: 0;
+  border-right: 13px solid rgba(241, 243, 245, 1);
+  border-bottom: 12px solid transparent;
+}
+.message__text-2:before {
+	content: "";
+    position: absolute;
+    left: 100%;
+    width: 0;
+    height: 0;
+    border-left: 13px solid #ebebeb;
+    border-bottom: 12px solid transparent;
+}
+
+.message--user-2 {
+  justify-content: flex-end;
+}
+.message--user-2 .message__time {
+  text-align: right;
+  margin: 0 50px 5px 0;
+}
+.message--user-2 .message__author-pic {
+  order: 1;
+  margin: 0 0 0 10px;
+}
+.message--user-2 .message__text {
+  background-color: rgba(241, 243, 245, 1);
+}
+.chat__border-time{
+  border: 1px solid white;
+  border-right: none;
+  border-left: none;
+  border-bottom: none;
+}
+.chat__message-time{
+  color: black;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+}
+.chat__enter-message{
+  height: 33%;
+  padding: 1% 1% 1% 1%;
+}
+.chat__enter-message__input{
+  width: 93%;
+  height: 50%;
+  background: #FFFFFF;
+  border: 1px solid #DBDBDB;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin: 3% 2% 3% 3%;
+  padding: 2%;
+  resize: none;
+  font-family: extra-font, Noto Sans;
+  font-size: 14px;
+  line-height: 19px;
+  color: #696969;
+}
+.chat__enter-message__btn{
+  background: #0F54B9;
+  box-shadow: 0px 4px 6px rgba(15, 84, 185, 0.3);
+  border-radius: 21px;
+  font-family: Proxima Nova;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #FFFFFF;
+  border-style: none;
+  margin: 0 0 2% 3%;
+  width: 144px;
+  height: 41px;
+  cursor: pointer;
+}
+.chat__enter-message__btn:active {
+      filter: brightness(80%);
+}
+@media only screen and (max-width: 768px){
+  .chat{
+    width: 100vw;
+    height: 100vh;
+  }
+}
+</style>
